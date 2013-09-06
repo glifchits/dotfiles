@@ -20,12 +20,12 @@ execute "set shiftwidth=".tabsize
 :nnoremap <leader>` viw<esc>a`<esc>hbi:method:`<esc>lel
 :inoremap jk <esc>
 
-"call pathogen#infect()
-"let g:airline_powerline_fonts=1
+call pathogen#infect()
+let g:airline_powerline_fonts=1
 
 :iabbrev -- —
 
 autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype javascript setlocal ts=4 sts=4 sts=0 noexpandtab
 autocmd Filetype c setlocal ts=4 sts=4 sts=0 noexpandtab
-autocmd Filetype test setlocal ts=4 sts=4 sts=0 noexpandtab
+autocmd Filetype test setlocal ts=7 sts=7 sts=7 expandtab

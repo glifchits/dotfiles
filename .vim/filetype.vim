@@ -4,5 +4,5 @@ if exists("did_load_filetypes")
 endif
 
 augroup filetypedetect
-  au! BufRead,BufNewFile *.test	setfiletype test
+  au! BufRead,BufNewFile *.test	setft test
 augroup END
