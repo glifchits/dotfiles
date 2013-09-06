@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/glifchits/.fontconfig'
+let g:netrw_dirhist_2='/Users/glifchits'
+let g:netrw_dirhist_3='/Users/glifchits/.npm'
+let g:netrw_dirhist_4='/Users/glifchits/Development/cp317-beer-pong/.git'
+let g:netrw_dirhist_5='/Users/glifchits/Development/cp317-beer-pong/pongtracker'
+let g:netrw_dirhist_6='/Users/glifchits/Development/georgelifchits.ca/views'
+let g:netrw_dirhist_7='/Users/glifchits/Development/georgelifchits.ca/routes'
+let g:netrw_dirhist_8='/Users/glifchits/Development/georgelifchits.ca/.git'
+let g:netrw_dirhist_9='/Users/glifchits/Development/georgelifchits.ca/public'
