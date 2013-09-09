@@ -10,6 +10,9 @@ filetype plugin indent on
 " set powerline fonts
 let g:airline_powerline_fonts=1
 
+" GitGutter autoenable
+let g:gitgutter_enabled = 1
+
 " don't bother with vi compatibility
 set nocompatible
 
@@ -64,8 +67,17 @@ inoremap jk <esc>
 " abbreviations, shortcuts
 iabbrev -- —
 
+
+" gui settings
+if (&t_Co == 256 || has('gui_running'))
+  if ($TERM_PROGRAM == 'iTerm.app')
+    colorscheme solarized
+  else
+    colorscheme desert
+  endif
+endif
+
 " File type settings
-autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab
-autocmd Filetype javascript setlocal ts=4 sts=4 sts=0 noexpandtab
-autocmd Filetype c setlocal ts=4 sts=4 sts=0 noexpandtab
-autocmd Filetype test setlocal ts=7 sts=7 sts=7 expandtab
+autocmd Filetype python       setlocal ts=4 sts=4 sw=4  expandtab
+autocmd Filetype javascript   setlocal ts=4 sts=4 sts=0 noexpandtab
+autocmd Filetype c            setlocal ts=4 sts=4 sts=0 noexpandtab
