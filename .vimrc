@@ -81,5 +81,5 @@ endif
 autocmd Filetype python       setlocal ts=4 sts=4 sw=4  expandtab
 autocmd Filetype javascript   setlocal ts=4 sts=4 sts=0 noexpandtab
 autocmd Filetype c            setlocal ts=4 sts=4 sts=0 noexpandtab
-autocmd Filetype pybot        setlocal ts=8 sts=8 sts=0 expandtab
+autocmd Filetype robot        setlocal ts=8 sts=8 sw=8  expandtab
 
