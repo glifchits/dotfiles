@@ -11,7 +11,7 @@ filetype plugin indent on
 let g:airline_powerline_fonts=1
 
 " GitGutter autoenable
-let g:gitgutter_enabled = 1
+let g:gitgutter_enabled=1
 
 " don't bother with vi compatibility
 set nocompatible
@@ -31,7 +31,7 @@ set ignorecase                                               " case-insensitive 
 set incsearch                                                " search as you type
 set laststatus=2                                             " always show statusline
 set list                                                     " show trailing whitespace
-set listchars=tab:▸\ ,trail:▫
+set listchars=tab:▸\ ,trail:▫                                " comment is to drive home that the square here is not a space
 set number                                                   " show line numbers
 set ruler                                                    " show where you are
 set scrolloff=3                                              " show context above/below cursorline
@@ -67,7 +67,6 @@ inoremap jk <esc>
 " abbreviations, shortcuts
 iabbrev -- —
 
-
 " gui settings
 if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'iTerm.app')
@@ -77,9 +76,11 @@ if (&t_Co == 256 || has('gui_running'))
   endif
 endif
 
+" md is markdown
+autocmd BufRead,BufNewFile *.md set filetype=markdown
 " File type settings
 autocmd Filetype python       setlocal ts=4 sts=4 sw=4  expandtab
-autocmd Filetype javascript   setlocal ts=4 sts=4 sts=0 noexpandtab
+autocmd Filetype javascript   setlocal ts=4 sts=4 sts=0 expandtab
 autocmd Filetype c            setlocal ts=4 sts=4 sts=0 noexpandtab
-autocmd Filetype robot        setlocal ts=8 sts=8 sw=8  expandtab
+autocmd Filetype robot        setlocal ts=8 sts=8 sts=0 noexpandtab
 
