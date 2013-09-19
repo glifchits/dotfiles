@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/jedi-vim"]
 	path = .vim/bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
+[submodule ".vim/bundle/robotframework-vim"]
+	path = .vim/bundle/robotframework-vim
+	url = https://github.com/mfukar/robotframework-vim.git
