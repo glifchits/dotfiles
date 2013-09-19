@@ -5,6 +5,7 @@
 filetype on " without this vim emits a zero exit status, later, because of :ft off
 filetype off
 call pathogen#infect()
+call pathogen#helptags()
 filetype plugin indent on
 
 " set powerline fonts
