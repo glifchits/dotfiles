@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/vim-jsdoc"]
 	path = .vim/bundle/vim-jsdoc
 	url = https://github.com/heavenshell/vim-jsdoc.git
+[submodule ".vim/bundle/jedi-vim"]
+	path = .vim/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
