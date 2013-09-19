@@ -16,3 +16,6 @@
 [submodule ".vim/bundle/jade.vim"]
 	path = .vim/bundle/jade.vim
 	url = https://github.com/vim-scripts/jade.vim.git
+[submodule ".vim/bundle/vim-jsdoc"]
+	path = .vim/bundle/vim-jsdoc
+	url = https://github.com/heavenshell/vim-jsdoc.git

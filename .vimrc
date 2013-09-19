@@ -63,6 +63,8 @@ nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>c <Plug>Kwbd
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 inoremap jk <esc>
+inoremap kj <esc>
+inoremap JK <esc>
 
 " abbreviations, shortcuts
 iabbrev -- —
