@@ -70,19 +70,15 @@ inoremap JK <esc>
 " abbreviations, shortcuts
 iabbrev ;- —
 
-" gui settings
-if (&t_Co == 256 || has('gui_running'))
-  if ($TERM_PROGRAM == 'iTerm.app')
-    colorscheme solarized
-  else
-    colorscheme desert
-  endif
-endif
+" colour scheme
+set t_Co=256
+set background=dark
+colorscheme solarized
 
 " md is markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 " File type settings
-autocmd Filetype python       setlocal ts=4 sts=4 sw=4  expandtab
+autocmd Filetype python       setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype javascript   setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype c            setlocal ts=4 sw=4 sts=0 noexpandtab
 autocmd Filetype robot        setlocal ts=8 sw=8 sts=0 noexpandtab
