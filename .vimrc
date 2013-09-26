@@ -68,7 +68,7 @@ inoremap kj <esc>
 inoremap JK <esc>
 
 " abbreviations, shortcuts
-iabbrev -- —
+iabbrev ;- —
 
 " gui settings
 if (&t_Co == 256 || has('gui_running'))
@@ -83,7 +83,7 @@ endif
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 " File type settings
 autocmd Filetype python       setlocal ts=4 sts=4 sw=4  expandtab
-autocmd Filetype javascript   setlocal ts=4 sts=4 sts=0 expandtab
-autocmd Filetype c            setlocal ts=4 sts=4 sts=0 noexpandtab
-autocmd Filetype robot        setlocal ts=8 sts=8 sts=0 noexpandtab
-
+autocmd Filetype javascript   setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype c            setlocal ts=4 sw=4 sts=0 noexpandtab
+autocmd Filetype robot        setlocal ts=8 sw=8 sts=0 noexpandtab
+autocmd Filetype gitconfig    setlocal ts=8 sw=8 sts=0 noexpandtab
