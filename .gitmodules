@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/robotframework-vim"]
 	path = .vim/bundle/robotframework-vim
 	url = https://github.com/mfukar/robotframework-vim.git
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
