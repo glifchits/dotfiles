@@ -68,7 +68,8 @@ inoremap kj <esc>
 inoremap JK <esc>
 
 " plugin settings
-let g:pymode_folding = 0
+let g:pymode_folding = 0        " python-mode folds all functions by default, disable this
+let g:pymode_lint_write = 0     " python-mode runs a PyLint check on every save, disable this
 
 " colour scheme
 set t_Co=256
