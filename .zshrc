@@ -45,4 +45,18 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/George/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin
+PATH=/Library/Frameworks/Python.framework/Versions/2.7/bin
+PATH=$PATH:/Users/George/bin
+PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/bin
+PATH=$PATH:/bin
+PATH=$PATH:/usr/sbin:
+PATH=$PATH:/sbin
+PATH=$PATH:/usr/X11/bin
+PATH=$PATH:/usr/local/git/bin
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+
+export PATH
