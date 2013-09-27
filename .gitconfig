@@ -32,6 +32,6 @@
 	ls = ls-files
 	# Show files ignored by git:
 	ignore = ls-files -o -i --exclude-standard
-	ign = ignore
 	# Show change in commit logs from two commits
 	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+	amend = commit --amend
