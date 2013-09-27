@@ -8,12 +8,6 @@ call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 
-" set powerline fonts
-let g:airline_powerline_fonts=1
-
-" GitGutter autoenable
-let g:gitgutter_enabled=1
-
 " don't bother with vi compatibility
 set nocompatible
 
@@ -68,8 +62,10 @@ inoremap kj <esc>
 inoremap JK <esc>
 
 " plugin settings
-let g:pymode_folding = 0        " python-mode folds all functions by default, disable this
-let g:pymode_lint_write = 0     " python-mode runs a PyLint check on every save, disable this
+let g:pymode_folding = 0                " python-mode folds all functions by default, disable this
+let g:pymode_lint_write = 0             " python-mode runs a PyLint check on every save, disable this
+let g:airline_powerline_fonts=1         " set powerline fonts
+let g:gitgutter_enabled=1               " enable GitGutter
 
 " colour scheme
 set t_Co=256
