@@ -67,8 +67,8 @@ inoremap jk <esc>
 inoremap kj <esc>
 inoremap JK <esc>
 
-" abbreviations, shortcuts
-iabbrev ;- —
+" plugin settings
+let g:pymode_folding = 0
 
 " colour scheme
 set t_Co=256
