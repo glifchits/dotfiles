@@ -2,7 +2,6 @@
 	name = George Lifchits
 	email = george.lifchits@gmail.com
 	github = glifchits
-
 [color]
 	ui = auto
 [color "branch"]
@@ -18,7 +17,6 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-
 [alias]
 	st = status
 	ci = commit
@@ -26,7 +24,7 @@
 	co = checkout
 	df = diff
 	dc = diff --cached
-	lg = log -p
+	# lg = log -p
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ls = ls-files
@@ -35,5 +33,21 @@
 	# Show change in commit logs from two commits
 	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
 	amend = commit --amend
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	restore = "!f() { git checkout $(git rev-list -n 1 HEAD -- $1)~1 -- $1 }; f"
 [web]
 	browser = open
+[difftool "kdiff3"]
+	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+	trustExitCode = false
+[difftool]
+	prompt = false
+[diff]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+	trustExitCode = false
+[mergetool]
+	keepBackup = false
+[merge]
+	tool = kdiff3
