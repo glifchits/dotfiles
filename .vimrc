@@ -2,17 +2,14 @@
 " https://github.com/square/maximum-awesome/blob/master/vimrc
 
 " set up pathogen, https://github.com/tpope/vim-pathogen
-filetype on " without this vim emits a zero exit status, later, because of :ft off
+filetype on   " without this vim emits a zero exit status, later, because of :ft off
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 
-" don't bother with vi compatibility
-set nocompatible
-
-" enable syntax highlighting
-syntax enable
+set nocompatible                                             " don't bother with vi compatibility
+syntax enable                                                " enable syntax highlighting
 
 set autoindent
 set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
