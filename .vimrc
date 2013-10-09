@@ -78,3 +78,7 @@ autocmd Filetype javascript   setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype c            setlocal ts=4 sw=4 sts=0 noexpandtab
 autocmd Filetype robot        setlocal ts=8 sw=8 sts=0 noexpandtab
 autocmd Filetype gitconfig    setlocal ts=8 sw=8 sts=0 noexpandtab
+
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
