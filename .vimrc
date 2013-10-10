@@ -35,6 +35,7 @@ set tabstop=8                                                " actual tabs occup
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set wildmenu                                                 " show a navigable menu for tab completion
 set wildmode=longest,list,full
+set tags=tags;                                               " search for tags file up to root of directory
 
 " keyboard shortcuts
 let mapleader = ','
