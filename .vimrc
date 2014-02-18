@@ -56,11 +56,11 @@ nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>c <Plug>Kwbd
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 inoremap jk <esc>
-inoremap kj <esc>
 inoremap JK <esc>
 
 " plugin settings
 let g:pymode_folding = 0                " python-mode folds all functions by default, disable this
+let g:pymode_virtualenv=1               " auto-fix vim python paths if virtualenv enabled
 let g:pymode_lint_write = 0             " python-mode runs a PyLint check on every save, disable this
 let g:airline_powerline_fonts=1         " set powerline fonts
 let g:gitgutter_enabled=1               " enable GitGutter
@@ -74,11 +74,12 @@ highlight clear SignColumn
 " md is markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 " File type settings
-autocmd Filetype python       setlocal ts=4 sts=4 sw=4 expandtab
-autocmd Filetype javascript   setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype python       setlocal ts=4 sts=4 sw=4 textwidth=79 expandtab
+autocmd Filetype javascript   setlocal ts=4 sw=4 sts=0 textwidth=80 expandtab
 autocmd Filetype c            setlocal ts=4 sw=4 sts=0 noexpandtab
 autocmd Filetype robot        setlocal ts=8 sw=8 sts=0 noexpandtab
 autocmd Filetype gitconfig    setlocal ts=8 sw=8 sts=0 noexpandtab
+autocmd Filetype tex          setlocal textwidth=90
 
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
