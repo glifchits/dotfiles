@@ -61,7 +61,7 @@ inoremap JK <esc>
 " plugin settings
 let g:pymode_folding = 0                " python-mode folds all functions by default, disable this
 let g:pymode_virtualenv=1               " auto-fix vim python paths if virtualenv enabled
-let g:pymode_lint_write = 0             " python-mode runs a PyLint check on every save, disable this
+let g:pymode_lint_write=0               " python-mode runs a PyLint check on every save, disable this
 let g:airline_powerline_fonts=1         " set powerline fonts
 let g:gitgutter_enabled=1               " enable GitGutter
 
@@ -75,7 +75,7 @@ highlight clear SignColumn
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 " File type settings
 autocmd Filetype python       setlocal ts=4 sts=4 sw=4 textwidth=79 expandtab
-autocmd Filetype javascript   setlocal ts=4 sw=4 sts=0 textwidth=80 expandtab
+autocmd Filetype javascript   setlocal ts=4 sw=4 sts=0 textwidth=80 noexpandtab
 autocmd Filetype c            setlocal ts=4 sw=4 sts=0 noexpandtab
 autocmd Filetype robot        setlocal ts=8 sw=8 sts=0 noexpandtab
 autocmd Filetype gitconfig    setlocal ts=8 sw=8 sts=0 noexpandtab

@@ -35,6 +35,7 @@
 	amend = commit --amend
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	restore = "!f() { git checkout $(git rev-list -n 1 HEAD -- $1)~1 -- $1 }; f"
+	up = "!git remote update -p; git merge --ff-only @{u}"
 [web]
 	browser = open
 [difftool "kdiff3"]
@@ -51,3 +52,5 @@
 	keepBackup = false
 [merge]
 	tool = kdiff3
+[push]
+	default = simple

@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - 0.8
+notifications:
+  email: false
+before_install:
+  - sudo apt-get install -qq vim subversion
+  - svn checkout http://v8.googlecode.com/svn/trunk/ ./v8 >/dev/null
+  - cd v8
+  - make dependencies >/dev/null
+  - sudo make native >/dev/null
+  - sudo cp out/native/d8 /usr/local/bin/v8
+  - cd ..
+  - sudo rm -rf v8
+before_script:
+  - npm install -g grunt-cli
+  - npm install
+  - sleep 5
+script: npm test
