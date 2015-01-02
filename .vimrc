@@ -44,7 +44,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <leader>l :Align
-nmap <leader>a :Ack 
+nmap <leader>a :Ack
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
@@ -71,11 +71,11 @@ set background=dark
 colorscheme solarized
 highlight clear SignColumn
 
-" md is markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
+autocmd BufWritePre * :call whitespace#strip_trailing() " strip trailing whitespace on save
 " File type settings
 autocmd Filetype python       setlocal ts=4 sts=4 sw=4 textwidth=79 expandtab
-autocmd Filetype javascript   setlocal ts=4 sw=4 sts=0 textwidth=80 noexpandtab
+autocmd Filetype javascript   setlocal ts=2 sw=2 sts=0 textwidth=80 expandtab
 autocmd Filetype c            setlocal ts=4 sw=4 sts=0 noexpandtab
 autocmd Filetype robot        setlocal ts=8 sw=8 sts=0 noexpandtab
 autocmd Filetype gitconfig    setlocal ts=8 sw=8 sts=0 noexpandtab
