@@ -52,9 +52,6 @@
 [submodule ".vim/bundle/javascript-libraries-syntax.vim"]
 	path = .vim/bundle/javascript-libraries-syntax.vim
 	url = git@github.com:othree/javascript-libraries-syntax.vim.git
-[submodule ".vim/bundle/jshint.vim"]
-	path = .vim/bundle/jshint.vim
-	url = https://github.com/wookiehangover/jshint.vim.git
 [submodule ".vim/bundle/vim-wakatime"]
 	path = .vim/bundle/vim-wakatime
 	url = git://github.com/wakatime/vim-wakatime.git
