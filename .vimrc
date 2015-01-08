@@ -75,6 +75,8 @@ colorscheme solarized
 highlight clear SignColumn
 
 autocmd BufRead,BufNewFile *.md set filetype=markdown
+" files like .bowerrc, .jshintrc, .jscsrc
+autocmd BufRead,BufNewFile .*rc set filetype=json
 autocmd BufWritePre * :call whitespace#strip_trailing() " strip trailing whitespace on save
 " File type settings
 autocmd Filetype python       setlocal ts=4 sts=4 sw=4 textwidth=79 expandtab
