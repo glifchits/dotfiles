@@ -66,7 +66,8 @@ let g:airline_powerline_fonts=1         " set powerline fonts
 let g:gitgutter_enabled=1               " enable GitGutter
 
 " syntastic
-let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_checkers = ['jsxhint', 'jscs']
+let g:syntastic_javascript_jscs_args = ['--esprima=esprima-fb']
 
 " colour scheme
 set t_Co=256
@@ -77,6 +78,8 @@ highlight clear SignColumn
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 " files like .bowerrc, .jshintrc, .jscsrc
 autocmd BufRead,BufNewFile .*rc set filetype=json
+" exclude .vimrc from above
+autocmd BufRead,BufNewFile .vimrc set filetype=vim
 autocmd BufWritePre * :call whitespace#strip_trailing() " strip trailing whitespace on save
 " File type settings
 autocmd Filetype python       setlocal ts=4 sts=4 sw=4 textwidth=79 expandtab
