@@ -66,8 +66,9 @@ let g:airline_powerline_fonts=1         " set powerline fonts
 let g:gitgutter_enabled=1               " enable GitGutter
 
 " syntastic
-let g:syntastic_javascript_checkers = ['jsxhint', 'jscs']
-let g:syntastic_javascript_jscs_args = ['--esprima=esprima-fb']
+let g:syntastic_javascript_checkers = ['jsxhint']
+", 'jscs']
+" let g:syntastic_javascript_jscs_args = ['--esprima=esprima-fb']
 
 " colour scheme
 set t_Co=256
