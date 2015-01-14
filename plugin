@@ -1,0 +1,50 @@
+#!/bin/bash
+
+case "$1" in
+  add)
+    if [[ -z "$2" ]]; then
+      >&2 echo "Usage: $0 $1 \<GitHub URL\>"
+      exit 1
+    fi
+
+    if ! [[ $2 =~ git@github.com:*/* ]]; then
+      >&2 echo "Error: the URL given does not look like a correct GitHub repo URL"
+      exit 1
+    fi
+
+    GITURL=$2
+    GITNAME=$(echo "$GITURL" | cut -d':' -f2)
+    REPONAME=$(echo "$GITNAME" | cut -d'/' -f2)
+
+    git submodule add $GITURL .vim/bundle/$REPONAME
+    git commit -m "added vim plugin $GITNAME"
+    ;;
+
+  remove)
+    if [[ -z "$2" ]]; then
+      >&2 echo Usage: $0 $1 \<submodule name\>
+      exit 1
+    fi
+
+    MATCH=$(cat .gitmodules | grep "^\[submodule \".vim/bundle/$2\"\]$")
+
+    if [[ -z $MATCH ]]; then
+      >&2 echo Nothing found for submodule \"$2\"
+      exit 1
+    fi
+
+    SUBMODULE=".vim/bundle/$2"
+
+    git rm $SUBMODULE
+    git commit -m "removed submodule $SUBMODULE"
+    ;;
+
+  update)
+    git submodule update --init
+    git submodule foreach git pull origin master
+    ;;
+
+  *)
+    >&2 echo "Usage: $0 {add|remove|update}";
+    exit 1
+esac
