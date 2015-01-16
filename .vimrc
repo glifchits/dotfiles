@@ -65,6 +65,9 @@ let g:pymode_lint_write=0               " python-mode runs a PyLint check on eve
 let g:airline_powerline_fonts=1         " set powerline fonts
 let g:gitgutter_enabled=1               " enable GitGutter
 
+" JsDoc feature_shorthand branch
+let g:jsdoc_allow_shorthand=1
+
 " syntastic
 let g:syntastic_javascript_checkers = ['jsxhint']
 ", 'jscs']
