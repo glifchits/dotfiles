@@ -93,6 +93,7 @@ autocmd Filetype robot        setlocal ts=8 sw=8 sts=0 noexpandtab
 autocmd Filetype gitconfig    setlocal ts=8 sw=8 sts=0 noexpandtab
 autocmd Filetype tex          setlocal textwidth=90
 autocmd Filetype coffee       setlocal ts=4 sts=4 sw=4 noexpandtab
+autocmd Filetype markdown     setlocal tw=80
 
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
