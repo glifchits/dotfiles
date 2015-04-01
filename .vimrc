@@ -66,11 +66,9 @@ let g:airline_powerline_fonts=1         " set powerline fonts
 let g:gitgutter_enabled=1               " enable GitGutter
 
 " JsDoc settings
-let g:jsdoc_allow_input_prompt=1
 let g:jsdoc_return=0
 let g:jsdoc_return_type=1
 let g:jsdoc_return_description=1
-let g:jsdoc_input_description=1
 let g:jsdoc_underscore_private=1
 let g:jsdoc_allow_shorthand=1
 
