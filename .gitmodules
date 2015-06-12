@@ -13,9 +13,6 @@
 [submodule ".vim/bundle/vim-jsdoc"]
 	path = .vim/bundle/vim-jsdoc
 	url = https://github.com/heavenshell/vim-jsdoc.git
-[submodule ".vim/bundle/robotframework-vim"]
-	path = .vim/bundle/robotframework-vim
-	url = https://github.com/mfukar/robotframework-vim.git
 [submodule ".vim/bundle/python-mode"]
 	path = .vim/bundle/python-mode
 	url = https://github.com/klen/python-mode.git
