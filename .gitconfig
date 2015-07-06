@@ -38,6 +38,7 @@
 	restore = "!f() { git checkout $(git rev-list -n 1 HEAD -- $1)~1 -- $1 }; f"
 	up = "!git remote update -p; git merge --ff-only @{u}"
 	conflicts = !git ls-files -u | cut -f 2 | sort -u
+	append = commit --amend -C HEAD
 [web]
 	browser = open
 [difftool "kdiff3"]
