@@ -73,9 +73,11 @@ let g:jsdoc_underscore_private=1
 let g:jsdoc_allow_shorthand=1
 
 " syntastic
-let g:syntastic_javascript_checkers = ['jsxhint']
-", 'jscs']
-" let g:syntastic_javascript_jscs_args = ['--esprima=esprima-fb']
+let g:syntastic_javascript_checkers = ['eslint']
+
+" https://github.com/othree/javascript-libraries-syntax.vim
+let g:used_javascript_libs = 'react'
+
 
 " colour scheme
 set t_Co=256
