@@ -47,15 +47,21 @@
 [difftool]
 	prompt = false
 [diff]
-	tool = kdiff3
+	tool = diffmerge
 [mergetool "kdiff3"]
 	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
 	trustExitCode = false
 [mergetool]
 	keepBackup = false
 [merge]
-	tool = kdiff3
+	tool = diffmerge
+	ff = false
 [push]
 	default = simple
 [core]
 	editor = /usr/local/bin/vim
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[mergetool "diffmerge"]
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+	trustExitCode = true
