@@ -59,7 +59,7 @@
 [push]
 	default = simple
 [core]
-	editor = /usr/local/bin/vim
+	editor = vim
 [difftool "diffmerge"]
 	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 [mergetool "diffmerge"]
