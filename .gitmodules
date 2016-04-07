@@ -58,3 +58,6 @@
 [submodule ".vim/bundle/syntastic.git"]
 	path = .vim/bundle/syntastic.git
 	url = git@github.com:scrooloose/syntastic.git
+[submodule ".vim/bundle/vim-bundle-mako.git"]
+	path = .vim/bundle/vim-bundle-mako.git
+	url = git@github.com:sophacles/vim-bundle-mako.git
