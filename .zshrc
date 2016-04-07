@@ -108,3 +108,7 @@ source ~/.profile
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# brew zsh completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+

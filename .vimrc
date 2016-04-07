@@ -104,3 +104,8 @@ autocmd Filetype markdown     setlocal tw=80
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" project specific .vimrc
+" thanks to http://andrew.stwrt.ca/posts/project-specific-vimrc/
+set exrc
+set secure

@@ -55,7 +55,7 @@
 	keepBackup = false
 [merge]
 	tool = diffmerge
-	ff = false
+	ff = true
 [push]
 	default = simple
 [core]
@@ -65,3 +65,7 @@
 [mergetool "diffmerge"]
 	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
 	trustExitCode = true
+[url "https://"]
+	insteadOf = git://
+[url "git://"]
+	insteadOf = https://
