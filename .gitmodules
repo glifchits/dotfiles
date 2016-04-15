@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/vim-bundle-mako.git"]
 	path = .vim/bundle/vim-bundle-mako.git
 	url = git@github.com:sophacles/vim-bundle-mako.git
+[submodule ".vim/bundle/vim-stylus.git"]
+	path = .vim/bundle/vim-stylus.git
+	url = git@github.com:vim-scripts/vim-stylus.git
