@@ -36,6 +36,7 @@ set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set wildmenu                                                 " show a navigable menu for tab completion
 set wildmode=longest,list,full
 set tags=tags;                                               " search for tags file up to root of directory
+set mouse=a                                                  " vim mousewheel http://vim.wikia.com/wiki/Using_the_mouse_for_Vim_in_an_xterm
 
 " keyboard shortcuts
 let mapleader = ','
@@ -81,8 +82,8 @@ let g:used_javascript_libs = 'react'
 
 " colour scheme
 set t_Co=256
-set background=dark
-colorscheme solarized
+" set background=dark
+" colorscheme solarized
 highlight clear SignColumn
 
 autocmd BufRead,BufNewFile *.md set filetype=markdown
@@ -90,10 +91,10 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile .*rc set filetype=json
 " exclude .vimrc from above
 autocmd BufRead,BufNewFile .vimrc set filetype=vim
-autocmd BufWritePre * :call whitespace#strip_trailing() " strip trailing whitespace on save
+"autocmd BufWritePre * :call whitespace#strip_trailing() " strip trailing whitespace on save
 " File type settings
-autocmd Filetype python       setlocal ts=4 sts=4 sw=4 textwidth=79 expandtab
-autocmd Filetype javascript   setlocal ts=2 sw=2 sts=0 textwidth=80 expandtab
+autocmd Filetype python       setlocal ts=4 sts=4 sw=4 expandtab
+autocmd Filetype javascript   setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype c            setlocal ts=4 sw=4 sts=0 noexpandtab
 autocmd Filetype robot        setlocal ts=8 sw=8 sts=0 noexpandtab
 autocmd Filetype gitconfig    setlocal ts=8 sw=8 sts=0 noexpandtab

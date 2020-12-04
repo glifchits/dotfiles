@@ -1,3 +1,4 @@
+# vim: filetype=sh
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -47,7 +48,7 @@ source $ZSH/oh-my-zsh.sh
 alias l='gls -lah --color --group-directories-first'
 alias git=hub
 
-plugins=(git pip brew bower npm osx python virtualenv virtualenvwrapper)
+plugins=(git pip brew bower npm osx python)
 
 
 ###-begin-npm-completion-###
@@ -106,9 +107,8 @@ fi
 
 source ~/.profile
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # brew zsh completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

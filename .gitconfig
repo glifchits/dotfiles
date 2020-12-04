@@ -65,7 +65,10 @@
 [mergetool "diffmerge"]
 	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
 	trustExitCode = true
-[url "https://"]
-	insteadOf = git://
-[url "git://"]
-	insteadOf = https://
+[status]
+	submoduleSummary = true
+[pull]
+	rebase = false
+[credential "https://git.overleaf.com"]
+	username = george.lifchits@gmail.com
+	helper = cache
