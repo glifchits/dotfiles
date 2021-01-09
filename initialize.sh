@@ -9,10 +9,8 @@ else
 fi
 
 echo "Symlinking files"
-for pth in .vim .zshrc .vimrc .jshintrc .gitconfig
+for pth in .vim .zshrc .vimrc .gitconfig
 do
   ln -s "$(pwd)/$pth" ~/"$pth"
 done
 
-brew install caskroom/cask/brew-cask
-brew tap caskroom/fonts
